@@ -1,25 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mazal Kesef — Trusted Investment Management</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mazal Kesef</title>
+
+  <meta name="color-scheme" content="light only" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+
+      --purple:#4B006E;           /* Byzantine purple */
+
+      --gold:#C8A96B;             /* muted gold accent */
+
+      --charcoal:#1E1E1E;
+
+      --gray:#F5F5F7;
+
+      --white:#FFFFFF;
+
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{margin:0;padding:0;background:var(--gray);color:var(--charcoal);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:980px;margin:0 auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+
+    nav a{margin-left:24px;font-weight:500;opacity:.9}
+
+    nav a:hover{opacity:1}
+
+    .card{
+
+      background:var(--white);
+
+      border:1px solid #e7e7ea;
+
+      border-radius:14px;
+
+      box-shadow:0 6px 24px rgba(0,0,0,.06);
+
+      overflow:hidden;
+
+    }
+
+    .hero{
+
+      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:40px;
+
+      background:linear-gradient(140deg, #ffffff 0%, #fbf9ff 40%, #f6f0ff 100%);
+
+      border-bottom:1px solid #eee;
+
+    }
+
+    @media (max-width:860px){ .hero{grid-template-columns:1fr;}}
+
+    .brand{
+
+      display:flex;flex-direction:column;gap:18px;
+
+    }
+
+    .badge{
+
+      font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--purple);
+
+      background:#f3e8fb; padding:6px 10px; border-radius:999px; width:max-content; border:1px solid #eddcfa;
+
+    }
+
+    h1{
+
+      font-family:"Cormorant Garamond",serif;
+
+      font-weight:700; font-size:48px; line-height:1.08; margin:0; color:var(--charcoal);
+
+    }
+
+    .tagline{font-size:18px; opacity:.9}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+
+    .btn{
+
+      display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:10px; border:1px solid #e6e2ea; background:#fff; font-weight:600
+
+    }
+
+    .btn.primary{background:var(--purple); color:#fff; border-color:var(--purple)}
+
+    .btn.primary:hover{filter:brightness(.96)}
+
+    .btn.ghost:hover{background:#faf7ff}
+
+    .logo-wrap{
+
+      background:radial-gradient(100% 100% at 0% 0%, #f5ecff 0%, #ffffff 50%, #fbf7ff 100%);
+
+      border:1px solid #eee; border-radius:12px; padding:24px; display:flex; align-items:center; justify-content:center;
+
+    }
+
+    /* Toggle which logo is visible by setting display:block; others none */
+
+    .logo-option{display:none; max-width:320px; width:100%}
+
+    .logo-option.active{display:block}section{padding:32px 40px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){ .grid-3{grid-template-columns:1fr}}
+
+.pill{padding:10px 12px;border:1px dashed #e5dcf4;border-radius:10px;background:#fcfaff}
+
+footer{
+  padding:24px 40px; border-top:1px solid #eee; background:#fff; display:grid; gap:14px
+}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+@media (max-width:860px){ .foot-grid{grid-template-columns:1fr}}
+
+/* Form */
+form{display:grid; gap:12px}
+input, textarea{
+  width:100%; padding:12px 14px; border-radius:10px; border:1px solid #e5e5ea; font-size:16px; background:#fff
+}
+textarea{min-height:120px; resize:vertical}
+.submit{
+  background:var(--purple); color:#fff; border:1px solid var(--purple); padding:12px 16px; border-radius:10px; font-weight:600; cursor:pointer
+}
+.submit:hover{filter:brightness(.96)}
+.small{font-size:12px; color:#666}
+.hr{height:1px; background:#eee; margin:8px 0 16px}
+  </style>
+
 </head>
+
 <body>
+
   <div class="container">
-    <h1>Mazal Kesef</h1>
-    <p>Secure. Strategic. Smart.</p>
 
-    <h2>Contact Our Office</h2>
-    <p>Email: <a href="mailto:office@mazalkesef.com.cy">office@mazalkesef.com.cy</a></p>
+    <header>
 
-    <a class="button" href="mailto:office@mazalkesef.com.cy">Send an Inquiry</a>
+      <div style="display:flex;align-items:center;gap:12px">
 
-    <div class="footer-note">
-      <p>At <strong>Mazal Kesef</strong>, we believe in disciplined growth and transparent financial stewardship.  
-      Your capital deserves clarity, consistency, and care — values that define every decision we make.</p>
+        <!-- Small inline mark for header -->
+
+        <svg width="28" height="28" viewBox="0 0 100 100" aria-label="Mazal Kesef" role="img">
+
+          <defs>
+
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+
+              <stop offset="0%" stop-color="#4B006E"/><stop offset="100%" stop-color="#6C1A8F"/>
+
+            </linearGradient>
+
+          </defs>
+
+          <rect x="6" y="6" width="88" height="88" rx="18" fill="url(#g)"/>
+
+          <path d="M25 70 L40 30 L55 70 L70 30" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" />
+
+        </svg>
+
+        <strong>Mazal Kesef</strong>
+
+      </div>
+
+      <nav>
+
+        <a href="#focus">Focus</a>
+
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </header><main class="card">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="brand">
+      <span class="badge">Mazal Kesef</span>
+      <h1>Prudent Capital, Long-Term Value</h1>
+      <p class="tagline">A discreet private investment presence.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Contact</a>
+        <a class="btn ghost" href="#">Download CV</a>
+      </div>
+      <div class="grid-3" style="margin-top:18px">
+        <div class="pill">Selective</div>
+        <div class="pill">Disciplined</div>
+        <div class="pill">Long-term</div>
+      </div>
+    </div>
+
+    <div class="logo-wrap">
+      <!-- Toggle active class between the three options -->
+      <!-- Option 1: Monogram MK -->
+      <div class="logo-option active" aria-label="Logo option: Monogram MK">
+        <svg viewBox="0 0 640 300" width="100%" role="img">
+          <defs>
+            <linearGradient id="mk-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4B006E"/><stop offset="100%" stop-color="#6C1A8F"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="640" height="300" rx="22" fill="#fff" stroke="#eee"/>
+          <g transform="translate(40,25)">
+            <!-- MK monogram outlined with slight contrast -->
+            <path d="M40 210 V40 L120 160 L200 40 V210" fill="none" stroke="url(#mk-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M300 210 V40 L360 120 L420 40 V210" fill="none" stroke="url(#mk-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- subtle upward arrow in negative space hinted by chevrons -->
+          </g>
+          <text x="40" y="280" font-family='Inter, sans-serif' font-size="22" fill="#4B006E">Mazal Kesef</text>
+        </svg>
+      </div>
+
+      <!-- Option 2: Coin Seal -->
+      <div class="logo-option" aria-label="Logo option: Coin Seal">
+        <svg viewBox="0 0 640 300" width="100%" role="img">
+          <defs>
+            <radialGradient id="coin" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#fff"/><stop offset="80%" stop-color="#EDE3F7"/><stop offset="100%" stop-color="#D8C8EE"/>
+            </radialGradient>
+          </defs>
+          <rect x="0" y="0" width="640" height="300" rx="22" fill="#fff" stroke="#eee"/>
+          <g transform="translate(180,30)">
+            <circle cx="140" cy="120" r="110" fill="url(#coin)" stroke="#4B006E" stroke-width="8"/>
+            <circle cx="140" cy="120" r="88" fill="#4B006E" />
+            <path d="M140 60 L156 108 L206 108 L166 138 L180 186 L140 158 L100 186 L114 138 L74 108 L124 108 Z"
+                  fill="#fff"/>
+          </g>
+          <text x="40" y="280" font-family='Inter, sans-serif' font-size="22" fill="#4B006E">Mazal Kesef</text>
+        </svg>
+      </div>
+
+      <!-- Option 3: Gate Pillars -->
+      <div class="logo-option" aria-label="Logo option: Gate Pillars">
+        <svg viewBox="0 0 640 300" width="100%" role="img">
+          <rect x="0" y="0" width="640" height="300" rx="22" fill="#fff" stroke="#eee"/>
+          <g transform="translate(60,30)" fill="none" stroke="#4B006E" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M40 210 V40" />
+            <path d="M140 210 V40" />
+            <path d="M40 60 H140" />
+            <path d="M240 210 V40" />
+            <path d="M340 210 V40" />
+            <path d="M240 100 H340" />
+            <path d="M140 40 L240 100" />
+          </g>
+          <text x="40" y="280" font-family='Inter, sans-serif' font-size="22" fill="#4B006E">Mazal Kesef</text>
+        </svg>
+      </div>
     </div>
   </div>
-</body>
-</html>
+
+  <!-- Focus (kept high-level) -->
+  <section id="focus">
+    <div class="grid-3">
+      <div class="pill">Private investments</div>
+      <div class="pill">Defensible assets</div>
+      <div class="pill">Durable cash flows</div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 style="font-family:'Cormorant Garamond',serif; margin:0 0 12px; color:var(--charcoal)">Contact</h2>
+    <div class="foot-grid">
+      <div>
+        <form action="mailto:contact@mazalkesef.example" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message"></textarea>
+          <button class="submit" type="submit">Send</button>
+          <div class="small">This opens your default email client.</div>
+        </form>
+      </div>
+      <div>
+        <div class="small" style="text-transform:uppercase; letter-spacing:.12em; color:#555; margin-bottom:6px">Office</div>
+        <div>Placeholder Address Line 1</div>
+        <div>Placeholder Address Line 2</div>
+        <div>City, Country</div>
+        <div class="small" style="margin-top:10px">Email: contact@mazalkesef.example</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="display:flex;align-items:center;gap:10px">
+      <svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="6" y="6" width="88" height="88" rx="18" fill="#4B006E"/>
+        <path d="M25 70 L40 30 L55 70 L70 30" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" />
+      </svg>
+      <strong>Mazal Kesef</strong>
+    </div>
+    <div class="small">© <span id="y"></span> Mazal Kesef. All rights reserved.</div>
+  </footer>
+</main>
+  </div>  <script>
+
+    // Set year
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+
+
+    // Utility: quick logo toggle via URL hash e.g., #logo=coin or #logo=gate
+
+    (function(){
+
+      const map = { monogram:0, coin:1, gate:2 };
+
+      const opts = document.querySelectorAll('.logo-option');
+
+      function setActive(i){
+
+        opts.forEach((el,idx)=> el.classList.toggle('active', idx===i));
+
+      }
+
+      const hash = new URLSearchParams(location.hash.replace('#','')).get('logo');
+
+      if(hash && hash in map){ setActive(map[hash]); }
+
+    })();
+
+  </script></body>
+  </html>
+
+    // Email form uses mailto for simplicity (no backend). Replace contact@mazalkesef.example and the placeholder address when ready.
+    // Switch logos by adding #logo=monogram, #logo=coin, or #logo=gate to the URL, or by toggling the active class.
