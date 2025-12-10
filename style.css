@@ -1,7 +1,5 @@
-/* Global layout & background */
-*,
-*::before,
-*::after {
+/* Reset & base */
+* {
   box-sizing: border-box;
 }
 
@@ -12,119 +10,129 @@ body {
   color: #1a1a1a;
 }
 
+/* Center the white card on the page */
 .page-wrapper {
   min-height: 100vh;
   display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: center;  /* horizontal centering */
-  padding: 32px 16px;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  padding: 30px 15px;
 }
 
-/* Main card container */
+/* Card container */
 .container {
-  max-width: 760px;
+  max-width: 720px;
   width: 100%;
   background: #ffffff;
   border-radius: 18px;
-  padding: 40px 36px;
-  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.25);
-  text-align: center; /* main content centered by default */
+  padding: 40px 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
+  text-align: center;        /* default: center for header + contact */
 }
 
 /* Typography */
 h1 {
   font-size: 2.6rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0 0 12px;
   color: #111827;
 }
 
 .hero-text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #4b5563;
   line-height: 1.7;
   margin: 0 0 28px;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin: 24px 0 8px;
+  font-size: 1.35rem;
+  margin: 24px 0 12px;
   color: #111827;
 }
 
-/* Contact section (still centered) */
+/* Contact section */
 .contact-section p {
   margin: 0 0 16px;
   color: #4b5563;
 }
 
-a {
-  color: #4c1d95;
+.contact-section a {
+  color: #4f46e5;
   text-decoration: none;
+  font-weight: 500;
 }
 
-a:hover {
+.contact-section a:hover {
   text-decoration: underline;
 }
 
-/* Primary button */
+/* Button */
 .button {
   display: inline-block;
   margin-top: 10px;
-  padding: 12px 28px;
+  padding: 12px 26px;
   font-size: 1rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #4c1d95, #7c3aed);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
-  box-shadow: 0 10px 25px rgba(76, 29, 149, 0.35);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .button:hover {
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(76, 29, 149, 0.45);
-  background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.5);
 }
 
-/* Footer-style sections (left aligned) */
+/* Footer note & legal — left aligned but inside centered card */
 .footer-note,
 .legal-notice {
   margin-top: 32px;
-  border-radius: 14px;
-  padding: 20px 22px;
-  text-align: left; /* override main centering */
+  text-align: left;   /* override container's center alignment */
 }
 
 .footer-note {
   background: #f9fafb;
-  color: #374151;
+  padding: 20px 20px 18px;
+  border-radius: 12px;
 }
 
 .footer-note p {
   margin: 0;
-  font-size: 0.98rem;
   line-height: 1.7;
+  font-size: 0.98rem;
+  color: #4b5563;
 }
 
 .legal-notice {
-  background: #f3e8ff;
-  color: #111827;
-  border: 1px solid rgba(76, 29, 149, 0.16);
+  padding-top: 8px;
+  font-size: 0.95rem;
+  color: #4b5563;
 }
 
 .legal-notice p {
   margin: 4px 0;
-  font-size: 0.95rem;
 }
 
-/* Responsive */
+.legal-notice a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.legal-notice a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile tweaks */
 @media (max-width: 600px) {
   .container {
     padding: 28px 20px;
-    border-radius: 16px;
   }
 
   h1 {
@@ -138,5 +146,6 @@ a:hover {
   .button {
     width: 100%;
     padding: 14px;
+    font-size: 1.02rem;
   }
 }
